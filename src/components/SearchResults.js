@@ -5,7 +5,6 @@ function SearchResults() {
   const location = useLocation();
   const query = new URLSearchParams(location.search).get('query');
 
-  // Replace this with actual search logic
   const results = [
     { id: 1, title: "Bali" },
     { id: 2, title: "Japan" },

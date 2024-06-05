@@ -7,6 +7,9 @@ import Booking from './components/Booking';
 import Contact from './components/Contact';
 import About from './components/About';
 import SearchResults from './components/SearchResults';
+import BusSchedule from './components/BusSchedule';
+import CarSchedule from './components/CarSchedule';
+import DriverGuideProfile from './components/DriverGuideProfile';
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/search" element={<SearchResults />} />
+        <Route path="/bus-schedule" element={<BusSchedule />} />
+        <Route path="/car-schedule" element={<CarSchedule />} />
+        <Route path="/driver-guide-profile" element={<DriverGuideProfile />} />
       </Routes>
     </Router>
   );

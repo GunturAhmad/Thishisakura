@@ -1,5 +1,4 @@
 import React from 'react';
-import './DriverGuideProfile.css';
 
 function DriverGuideProfile() {
   const profiles = [
@@ -26,20 +25,20 @@ function DriverGuideProfile() {
   ];
 
   return (
-    <div className="container-fluid text-light profile-container">
-      <h1 className="mb-4">Profil dan Ulasan Pengemudi dan Pemandu Wisata</h1>
+    <div className="container-fluid text-light">
+      <h1>Profil dan Ulasan Pengemudi dan Pemandu Wisata</h1>
       {profiles.map((profile, index) => (
-        <div key={index} className="card text-dark mb-3 profile-card">
+        <div key={index} className="card text-dark mb-3">
           <div className="card-header">
             <h3>{profile.name}</h3>
             <p>{profile.role}</p>
-            <p className="rating">Rating: {profile.rating} ★</p>
+            <p>Rating: {profile.rating}</p>
           </div>
           <div className="card-body">
             <h5>Ulasan:</h5>
             <ul>
               {profile.reviews.map((review, i) => (
-                <li key={i} className="review-item">{review}</li>
+                <li key={i}>{review}</li>
               ))}
             </ul>
           </div>
