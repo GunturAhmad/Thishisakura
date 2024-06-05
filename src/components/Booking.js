@@ -1,52 +1,41 @@
 import React from 'react';
-import './DriverGuideProfile.css';
+import { Link } from 'react-router-dom';
+import './Booking.css';
 
-function DriverGuideProfile() {
-  const profiles = [
-    {
-      name: 'John Doe',
-      role: 'Driver',
-      rating: 4.8,
-      reviews: [
-        'John was very professional and punctual.',
-        'Safe driver and very friendly.',
-        'Highly recommend John for any trip.'
-      ]
-    },
-    {
-      name: 'Jane Smith',
-      role: 'Tour Guide',
-      rating: 4.9,
-      reviews: [
-        'Jane is very knowledgeable and engaging.',
-        'Fantastic tour guide with lots of great stories.',
-        'Made the trip very enjoyable and informative.'
-      ]
-    }
-  ];
-
+function Booking() {
   return (
-    <div className="container-fluid text-light profile-container">
-      <h1 className="mb-4">Profil dan Ulasan Pengemudi dan Pemandu Wisata</h1>
-      {profiles.map((profile, index) => (
-        <div key={index} className="card text-dark mb-3 profile-card">
-          <div className="card-header">
-            <h3>{profile.name}</h3>
-            <p>{profile.role}</p>
-            <p className="rating">Rating: {profile.rating} ★</p>
-          </div>
+    <div className="container-fluid booking-container text-light">
+      <div className="row justify-content-center">
+        <div className="card booking-card mx-4 mb-5">
+          <img src="/img/hotel.jpg" className="card-img-top" alt="Hotel" />
           <div className="card-body">
-            <h5>Ulasan:</h5>
-            <ul>
-              {profile.reviews.map((review, i) => (
-                <li key={i} className="review-item">{review}</li>
-              ))}
-            </ul>
+            <h5 className="card-title">Hotel & Villa Booking</h5>
+            <p className="card-text">Book hotels & villas with us to get cheap and easy prices without reducing your comfort and enjoyment.</p>
+            <a href="https://wa.me/081234567890" className="btn btn-dark">Villa</a>
+            <a href="https://wa.me/081234567890" className="btn btn-dark">Hotel</a>
           </div>
         </div>
-      ))}
+        <div className="card booking-card mx-4 mb-5">
+          <img src="/img/tiket.jpg" className="card-img-top" alt="Cruise" />
+          <div className="card-body">
+            <h5 className="card-title">Cruise Booking and Tickets</h5>
+            <p className="card-text">Order tickets in an easy and fast way for plane tickets, ship tickets, and also tickets to the tourist attractions you want.</p>
+            <Link to="/driver-guide-profile" className="btn btn-dark">Cruise</Link>
+            <a href="https://wa.me/081234567890" className="btn btn-dark">Tickets</a>
+          </div>
+        </div>
+        <div className="card booking-card mx-4 mb-5">
+          <img src="/img/transport.jpg" className="card-img-top" alt="Transport" />
+          <div className="card-body">
+            <h5 className="card-title">Transportation Booking</h5>
+            <p className="card-text">Serves other transportation rentals that will make your trip easier. Key removal service available or with a professional driver.</p>
+            <Link to="/bus-schedule" className="btn btn-dark">Bus</Link>
+            <Link to="/car-schedule" className="btn btn-dark">Car</Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 
-export default DriverGuideProfile;
+export default Booking;
